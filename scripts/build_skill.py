@@ -124,6 +124,10 @@ def build_skill(version: str):
 
 
 def main():
+    # Configure UTF-8 encoding for Windows console
+    if sys.platform == "win32":
+        sys.stdout.reconfigure(encoding='utf-8')
+
     print(f"=== Build Skill: {SKILL_NAME} ===\n")
 
     try:
